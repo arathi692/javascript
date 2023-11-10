@@ -51,3 +51,43 @@ console.log("startswith: ",str.startsWith("hello"));
 console.log("endswith:",str.endsWith("world"));
 console.log("split ",str.split(','));//convert string to an array
 console.log("join",str.split(',').join(','));//convert array to string
+
+
+//arrays
+var a =10;
+console.log("a :",a);
+ 
+var arr=[10,20,30,40,"helloo","hiii",true,false,undefined,null];
+console.log("arr : ",arr);
+console.log("type of arr: ",typeof arr);
+console.log("length :",arr.length);
+console.log("join :",arr.join(''));
+console.log("index : ",arr.indexOf("helloo"))
+
+console.log("push element : ",arr.push("end"),',',"arr :",arr);
+console.log("unshift element :  ",arr.unshift("first"),',',"arr :",arr);
+console.log("pop element:  ",arr.pop(),',',"arr : ",arr);
+console.log("shift element: ",arr.shift(),',',"arr : ",arr);
+
+
+//replace elements in an array 
+arr[0]=15;
+arr[3]="welcome";
+console.log("arr :",arr);
+
+//splice
+arr.splice(7,2);
+console.log("arr :",arr);
+
+arr.splice(3,0,40);
+console.log("arr ",arr);
+
+//objects
+
+var obj = {
+    firstname: "anu",
+    lastname: "manu",
+    age: "22",
+};
+console.log("firstname: ",obj.firstname);
+console.log("age : ",obj.age);
