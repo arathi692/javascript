@@ -88,7 +88,9 @@ var obj = {
     firstname: "anu",
     lastname: "manu",
     age: "22",
+    hobbies: ["reading,writing,singing"],
 };
 console.log("obj :",obj);
+
 console.log("firstname: ",obj.firstname);
 console.log("age : ",obj.age);
