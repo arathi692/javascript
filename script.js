@@ -94,3 +94,74 @@ console.log("obj :",obj);
 
 console.log("firstname: ",obj.firstname);
 console.log("age : ",obj.age);
+
+obj.age=11;
+console.log("obj : ",obj);
+
+obj.mark1=50;
+console.log("obj : ",obj);
+
+obj.mark2=100;
+console.log("obj : ",obj);
+
+//json string
+
+var obj1={
+    name:"arun",
+    age:20,
+    indian:false
+};
+
+var a=10;
+console.log(`a: ${a}`);
+
+var json_str=JSON.stringify(obj1);
+
+//converting javascript object  JSON String
+console.log(`Json : ${json_str}`);
+
+//parsing JSON
+var obj3=JSON.parse(json_str);
+console.log(`object : ${obj3.name}`);
+
+
+{
+var a=10;//global scoped,can be declared anywhere in the function 
+
+}
+
+console.log("a : ",a);
+
+//block scoped 
+{
+    let b;//declare
+    b=15;//initialize
+
+    const c=20;
+    console.log("b : ",b);
+    console.log("c : ",c);
+
+}
+//hoisting
+console.log("x: ",x);
+var x=50;
+//console.log("y :",y); gives error
+
+
+let y=60;
+//multiple declarations
+var x=100;
+
+//javascript conditions
+
+let num1=30;
+let num2=46;
+if(num1>num2)
+{
+    console.log(`num1 :,${num1}is greater`)
+}else if(num1 == num2){
+    console.log("both are equal");
+
+}else{
+    console.log(`num2 : ${num2} is greater`)
+}
