@@ -165,3 +165,81 @@ if(num1>num2)
 }else{
     console.log(`num2 : ${num2} is greater`)
 }
+
+if(true || true || false){
+    console.log("condition true");
+
+}else{
+    console.log("condition false");
+
+}
+//+,-,*,/,%,++,++var,--var,var++,var--
+//&&,||,!
+//=
+//=,==,===,<,>,<=,>=,<==
+
+//pre increment
+let abc1=10;
+let result1=++abc1;
+console.log("result1 :",result1);
+
+//pre decrement
+let abc2=10;
+let result2=--abc2;
+console.log("result2:",result2);
+
+//post increment
+// let abc3=20;
+// let result3=abc3++;
+// console.log("result3:",result3);
+
+//post decrement
+// let abc4=10;
+// let result4=abc4++;
+// console.log("result4:",result4);
+
+
+//switch statement
+let day=4;
+
+switch(day){
+    case 1:
+    console.log("monday");
+    break;
+    case 2:
+    console.log("tuesday");
+    break;
+    case 3:
+    console.log("wednesday");
+    break;
+    case 4:
+    console.log("thurs");
+    break;
+    case 5:
+    console.log("friday");
+    break;
+    case 6:
+    console.log("saturday");
+    break;
+    case 7:
+    console.log("sunday");
+    break;
+    default:
+    console.log("invalid value");
+    break;
+}
+
+//loops
+for(var i=0;i<10;i++){
+    console.log(i);
+}
+
+let flag=false;
+
+{
+    let i=0;
+    while(i<=10){
+        console.log("hello from while loop..");
+        i=i+1;
+    }
+}
