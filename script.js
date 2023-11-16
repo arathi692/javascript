@@ -230,9 +230,14 @@ switch(day){
 }
 
 //loops
+//forloops
 for(var i=0;i<10;i++){
     console.log(i);
 }
+for(var i=0;i<10;i++){
+    console.log("hello");
+}
+//while loop
 
 let flag=false;
 
@@ -240,6 +245,26 @@ let flag=false;
     let i=0;
     while(i<=10){
         console.log("hello from while loop..");
-        i=i+1;
+        i = i+1;
     }
+    //do while
+do{
+    console.log("hello from while loop");
+    i = i + 1;
+}while(i <= 10);
+
+
+//break and continue
+for(let i=0;i<10;i++){
+    
+    if(i ==5){
+        continue;
+    }
+
+    if(i == 8){
+        break;
+    }
+    console.log(i);
+}
+
 }
