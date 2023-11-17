@@ -1,5 +1,5 @@
 console.log('welcome');
-alert('hiiiiiiiiiii ')//global variable
+// alert('hiiiiiiiiiii ')//global variable
 var i;//variable declaration
 i="hello";//initialisation
 var a=10;//declaration + initialisation
@@ -234,6 +234,7 @@ switch(day){
 for(var i=0;i<10;i++){
     console.log(i);
 }
+
 for(var i=0;i<10;i++){
     console.log("hello");
 }
@@ -247,6 +248,8 @@ let flag=false;
         console.log("hello from while loop..");
         i = i+1;
     }
+
+    
     //do while
 do{
     console.log("hello from while loop");
@@ -256,7 +259,7 @@ do{
 
 //break and continue
 for(let i=0;i<10;i++){
-    
+
     if(i ==5){
         continue;
     }
@@ -266,5 +269,92 @@ for(let i=0;i<10;i++){
     }
     console.log(i);
 }
+
+}
+//str="*\n**\n***\n"
+{
+    //nested loops
+    let string = '';
+    for(let i=0;i<=10;i++){
+        //nested for loop
+        for(let j=0;j<i;j++){
+            string = string + '*';
+            console.log(string);
+
+        }
+        string=string + '\n';
+        
+    }
+
+    //functions
+    //function definition
+    function printhello(){
+        //code block
+        console.log("hello");
+    }
+
+    printhello();//function call
+
+    //function to print sum
+    function sum(a,b)//parameter
+    {
+        let sum;
+        sum=a+b;
+        console.log("sum :",sum);
+    }
+    sum(10,20);//argument
+}
+
+
+
+
+for(var i=1;i<=10;i++){
+    console.log(i);
+}
+
+//to print the sum of 10 numbers
+{
+
+let sum = 0;
+
+for( let i=0; i<=10; i++){
+    sum = sum + i;
+    console.log("sum :",sum);
+    
+}
+
+//print even numbers
+let i=0;
+while(i<=20){
+
+    if(i%2==0){
+        console.log("i:",i);
+    }
+    i++;
+}
+
+
+
+}
+{
+//call by value
+let a =10;
+function update(a){
+    a="new value";
+    console.log("from function :",a);
+
+}
+update(a);
+console.log("a: ",a);
+
+//call by reference
+let arr =[10,20,30];
+function arrUpdate(arr){
+    arr[0] =100;
+    console.log("arr from function :",arr)
+
+}
+arrUpdate(arr);
+console.log("arr :",arr);
 
 }
