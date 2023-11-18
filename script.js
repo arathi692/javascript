@@ -336,6 +336,8 @@ while(i<=20){
 
 
 }
+
+
 {
 //call by value
 let a =10;
@@ -356,5 +358,52 @@ function arrUpdate(arr){
 }
 arrUpdate(arr);
 console.log("arr :",arr);
+
+}
+
+{
+//closures
+function outerFunction(){
+    const outerVariable = 'from outer function';
+    function innerFunction(){
+        function innerFunction1(){
+            function innerFunction2(){
+                  console.log("outerVariable : ",outerVariable);
+            }
+            return innerFunction2;
+        }
+        return innerFunction1;
+
+    }
+    return innerFunction;
+}
+
+let result = outerFunction();//innerfunction code
+console.log("result :",result);
+result();
+
+let result1=result();
+console.log("result1:",result1);
+result();
+
+let result2=result1();
+console.log("result2:",result2);
+result2(); 
+// a function along with its environment is called closure
+}
+
+{
+let content = document.getElementsByClassName("content");
+content[0].textContent="some content";
+content[1].textContent="Another content";
+
+let text = document.getElementById("text");
+text.textContent="some text";
+
+
+
+let para =document.getElementById("p");
+para[0].textContent ="A paragraph";
+
 
 }
