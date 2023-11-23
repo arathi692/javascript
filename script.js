@@ -392,18 +392,233 @@ result2();
 // a function along with its environment is called closure
 }
 
+// {
+// let content = document.getElementsByClassName("content");
+// content[0].textContent="some content";
+// content[1].textContent="Another content";
+
+// let text = document.getElementById("text");
+// text.textContent="some text";
+
+
+
+// let para =document.getElementById("p");
+// para[0].textContent ="A paragraph";
+
+// let listItem = document.querySelector(".container .container1 ul li");
+//     listItem.textContent = "List item 1";
+
+// }
+
 {
-let content = document.getElementsByClassName("content");
-content[0].textContent="some content";
-content[1].textContent="Another content";
+    //Type of functions
 
-let text = document.getElementById("text");
-text.textContent="some text";
+    //Named functions
+    function printHelloWorld() {
+        console.log("Hello world");
+    }
+
+    printHelloWorld();
+
+    //Anonymous functions
+    const printHai = function () {
+        console.log("Hai");
+    }
+
+    printHai();
+
+    //Arrow funtion
+    const printWelcome = () => {
+        console.log("Welcome");
+    };
+    printWelcome()
+
+    //call back function
+    // function printHaiWorld(a) {
+    //     a();
+    // }
+
+    // const callback = function () {
+    //     console.log("Hai world")
+    // }
+
+    // let btn = document.getElementById('btn1');
+
+    // btn.addEventListener('click', function () {
+    //     alert("Button clicked")
+    // });
+
+    // btn.addEventListener('mouseover', () => {
+    //     console.log("Mouse over event ...")
+    // });
+
+    // btn.addEventListener('mouseout', () => {
+    //     console.log("Mouse out event ...")
+    // });
+
+    // btn.addEventListener('mousdown', function () {
+    //     console.log("Mouse down event ...")
+    // });
+
+    // btn.addEventListener('mousup', () => {
+    //     console.log("Mouse up event ...")
+    // });
+
+    // btn.addEventListener('mousemove', () => {
+    //     console.log("Mouse move event ...")
+    // });
+
+    // let inp = document.getElementById('inp');
+
+    // inp.addEventListener('keydown', () => {
+    //     console.log("Keydown event ...");
+    // });
+
+    // inp.addEventListener('keyup', () => {
+    //     console.log("Keyup event ...");
+    // });
+
+    //Math function
+    console.log(Math.sqrt(16)); //4
+    console.log(Math.round(10.4)); //10
+    console.log(Math.round(10.5)); //11
+    console.log(Math.ceil(10.2)); //11
+    console.log(Math.ceil(10.8)); //11
+    console.log(Math.floor(10.7)); //10
+    console.log(Math.floor(10.2)); //10
+    console.log(Math.abs(-90)); //90
+    console.log(Math.abs(90)); //90
+    console.log(Math.PI); //3.141592653589793
+    console.log(Math.max(10, 20, 30)); //30
+    console.log(Math.min(10, 20, 30)); //10
+    console.log(Math.pow(2, 3)); //8
+
+}
+
+{
+
+    //Timer functions
+    setTimeout(function () {
+        console.log("From setTimeOut...");
+        // alert("From setTimeOut")
+    }, 3000);
+    setInterval(function () {
+        console.log("From setInterval");
+    }, 3000);
+
+    //Program to show current time
+    function putZero(sec) {
+        return sec < 10 ? "0" + sec : sec;
+    }
+
+    function show() {
+        var time = document.getElementById('time');
+        var dt = new Date();
+        var hours = dt.getHours();
+        //     if(hours>12) {
+        //         ampm = "pm";
+        // }else {
+        //     ampm = "am";
+        // }
+        var ampm = hours > 12 ? "pm" : "am";
+
+        //time.innerHTML = putZero(hours % 12) + ";" + putZero(getMinutes()) + ":" +putZero(dt.getSeconds()) + ampm;
+
+        setTimeout(function () {
+            show();//Recursive call
+        }, 1000);
+    }
+
+    show();
+}
+{
+    //spread operator
+    let arr = [1,2,3,4,5]
+    console.log("arr : ",arr);
+
+    let arr1 = [...arr,6];
+    console.log("arr1 :",arr1);
+    
+    let obj ={
+        firstname:"jane",
+        lastname:"don",
+        age:16
+
+    }
+
+    console.log("obj: ",obj);
+    let obj1={...obj,mark: 76};
+    console.log("obj1: ",obj1);
+{
+    //destructuring
+const[a,b,c,d,e] = arr;
+console.log("a: ",a);
+console.log("b :",b);
+//...
+
+const{firstName,lastName ,age}=obj;
+console.log("firstname :",firstName);
+console.log("lastname: ",lastName);
+console.log("age :",age);
+
+}
+//nested destructuring
+const matrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+
+];
+
+const [firstRow,secondRow, thirdRow]=matrix;
 
 
+const[a,b,c]=firstRow;
+const[d,e,f]=secondRow;
+const[g,h,i]=thirdRow;
+console.log("a: ",a);
+console.log("b :",b);
+console.log("d:",d);
+console.log("g :",g);
 
-let para =document.getElementById("p");
-para[0].textContent ="A paragraph";
+{
+const person={
+    name: "john",
+    age: 30,
+    address:{
+        city:"new york",
+        zipcode: '1001',
+    },
+}
+ 
 
+const{name,age,address: {city,zipcode}} = person;
+console.log("name :", name);
+console.log("age:",age);
+console.log("city:",city);
+console.log("zipcode:",zipcode);
+
+}
+}
+
+//to find factorial 
+
+{
+    function fact(a){
+        let fact = 1;
+        for(let i=a;i>0;i--)
+        {
+            fact=fact*i;
+        }
+        return fact;
+    }
+    let result=fact(4);
+    console.log("result:",result);
+
+}
+
+//fibonocci series (0,1,1,2,3,5)
+{
+    
 
 }
