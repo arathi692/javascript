@@ -82,7 +82,7 @@ console.log("arr :",arr);
 arr.splice(3,0,40);
 console.log("arr ",arr);
 
-//objects
+//objects:key value pairs
 
 var obj = {
     firstname: "anu",
@@ -143,7 +143,7 @@ console.log("a : ",a);
 
 }
 //hoisting
-console.log("x: ",x);
+console.log("x: ",x);//undefined
 var x=50;
 //console.log("y :",y); gives error
 
@@ -254,7 +254,7 @@ let flag=false;
 do{
     console.log("hello from while loop");
     i = i + 1;
-}while(i <= 10);
+}while(i <= 10);//
 
 
 //break and continue
@@ -495,44 +495,44 @@ result2();
 
 }
 
+// {
+
+//     //Timer functions
+//     setTimeout(function () {
+//         console.log("From setTimeOut...");
+//         // alert("From setTimeOut")
+//     }, 3000);
+//     setInterval(function () {
+//         console.log("From setInterval");
+//     }, 3000);
+
+//     //Program to show current time
+//     function putZero(sec) {
+//         return sec < 10 ? "0" + sec : sec;
+//     }
+
+//     function show() {
+//         var time = document.getElementById('time');
+//         var dt = new Date();
+//         var hours = dt.getHours();
+//         //     if(hours>12) {
+//         //         ampm = "pm";
+//         // }else {
+//         //     ampm = "am";
+//         // }
+//         var ampm = hours > 12 ? "pm" : "am";
+
+//         //time.innerHTML = putZero(hours % 12) + ";" + putZero(getMinutes()) + ":" +putZero(dt.getSeconds()) + ampm;
+
+//         setTimeout(function () {
+//             show();//Recursive call
+//         }, 1000);
+//     }
+
+//     show();
+// }
 {
-
-    //Timer functions
-    setTimeout(function () {
-        console.log("From setTimeOut...");
-        // alert("From setTimeOut")
-    }, 3000);
-    setInterval(function () {
-        console.log("From setInterval");
-    }, 3000);
-
-    //Program to show current time
-    function putZero(sec) {
-        return sec < 10 ? "0" + sec : sec;
-    }
-
-    function show() {
-        var time = document.getElementById('time');
-        var dt = new Date();
-        var hours = dt.getHours();
-        //     if(hours>12) {
-        //         ampm = "pm";
-        // }else {
-        //     ampm = "am";
-        // }
-        var ampm = hours > 12 ? "pm" : "am";
-
-        //time.innerHTML = putZero(hours % 12) + ";" + putZero(getMinutes()) + ":" +putZero(dt.getSeconds()) + ampm;
-
-        setTimeout(function () {
-            show();//Recursive call
-        }, 1000);
-    }
-
-    show();
-}
-{
-    //spread operator
+    //spread operator(dots using)
     let arr = [1,2,3,4,5]
     console.log("arr : ",arr);
 
@@ -619,6 +619,51 @@ console.log("zipcode:",zipcode);
 
 //fibonocci series (0,1,1,2,3,5)
 {
+    function  fibonacci(limit){
+        let a=0;
+        console.log(a);
+        let b=1;
+        console.log(b);
+        let sum=0;
+        while(sum<limit){
+            sum=a+b;
+            console.log(sum);
+            a=b;
+            b=sum;
+
+        }
+ 
+
+    }
+   fibonacci(15);
+}
+
+//sum=1
+//a=1
+//b=1
+
+//sum=2
+//a=1
+//b=2
+//sum=15
+//while loop stops
+
+//array to add
+{
+    
+    let arr=[0,1,2,3]
+    let sum = 0;
+    
+    for(i=0;i<arr.length;i++){
     
 
+sum =sum+arr[i];
+
+    }
+
+    console.log("sum :",sum);
+    avg=sum/arr.length;
+    console.log("avg :",avg);
+
+    
 }
