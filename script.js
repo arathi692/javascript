@@ -154,25 +154,25 @@ var x=100;
 
 //javascript conditions
 
-let num1=30;
-let num2=46;
-if(num1>num2)
-{
-    console.log(`num1 :,${num1}is greater`)
-}else if(num1 == num2){
-    console.log("both are equal");
+// let num1=30;
+// let num2=46;
+// if(num1>num2)
+// {
+//     console.log(`num1 :,${num1}is greater`)
+// }else if(num1 == num2){
+//     console.log("both are equal");
 
-}else{
-    console.log(`num2 : ${num2} is greater`)
-}
+// }else{
+//     console.log(`num2 : ${num2} is greater`)
+// }
 
-if(true || true || false){
-    console.log("condition true");
+// if(true || true || false){
+//     console.log("condition true");
 
-}else{
-    console.log("condition false");
+// }else{
+//     console.log("condition false");
 
-}
+// }
 //+,-,*,/,%,++,++var,--var,var++,var--
 //&&,||,!
 //=
@@ -274,17 +274,17 @@ for(let i=0;i<10;i++){
 //str="*\n**\n***\n"
 {
     //nested loops
-    let string = '';
-    for(let i=0;i<=10;i++){
-        //nested for loop
-        for(let j=0;j<i;j++){
-            string = string + '*';
-            console.log(string);
+    // let string = '';
+    // for(let i=0;i<=10;i++){
+    //     //nested for loop
+    //     for(let j=0;j<i;j++){
+    //         string = string + '*';
+    //         console.log(string);
 
-        }
-        string=string + '\n';
+    //     }
+    //     string=string + '\n';
         
-    }
+    // }
 
     //functions
     //function definition
@@ -391,6 +391,7 @@ console.log("result2:",result2);
 result2(); 
 // a function along with its environment is called closure
 }
+//dom methods
 
 // {
 // let content = document.getElementsByClassName("content");
@@ -666,4 +667,61 @@ sum =sum+arr[i];
     console.log("avg :",avg);
 
     
+}
+
+
+// function that check str is palindrome or not 
+function check_palindrome(str) {
+    let j = str.length - 1;
+    for (let i = 0; i < j / 2; i++) {
+        let x = str[i];//forward character 
+        let y = str[j - i];//backward character
+        if (x != y) {
+            // return false if string not match
+            return false;
+        }
+    }
+    /// return true if string is palindrome
+    return true;
+ 
+}
+ //function that print output if string is palindrome
+function is_palindrome(str) {
+    // variable that is true if string is palindrome
+    let ans = check_palindrome(str);
+    //condition checking ans is true or not 
+    if (ans == true) {
+        console.log("string is palindrome");
+    }
+    else {
+        console.log("string not a palindrome");
+    }
+}
+
+//multiplication table
+// {
+//     for (let i=1; i<=10; i++)
+//     {
+//         for (let j=1; j<=10; j++)
+//         {
+//             console.log(`${i}*${j}=${i*j}\n`);
+//         }
+//     }
+// }
+
+// sum of even and odd
+{
+    let evenSum =0;
+    let oddSum=0;
+    for (let i =1; i<=50;i++){
+        if(i%2==0){
+            console.log("Even : ",i);
+            evenSum=evenSum+i;
+        }else{
+            console.log("Odd  : ",i);
+            oddSum=oddSum+i;
+        }
+    }
+    console.log("odd sum  : ",oddSum);
+    console.log("even sum : ",evenSum);
 }
