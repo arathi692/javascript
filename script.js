@@ -7,9 +7,9 @@ console.log(i);
 console.log("a: ", a);
 
 //datatypes
-var str = "this is a string";
-console.log("str: ", str);
-console.log("type of str : ", typeof str);
+// var str = "this is a string";
+// console.log("str: ", str);
+// console.log("type of str : ", typeof str);
 var num = 100;
 console.log("str: ", num);
 console.log("type of str : ", typeof num);
@@ -39,18 +39,18 @@ console.log("type of str : ", typeof d1);
 document.write("know we are in a realscape")
 
 //STRING METHODS
-var str = "hello world";
-console.log(str.toUpperCase());
-console.log(str.length);
-console.log("lowercase", str.toLocaleLowerCase());
-console.log("trim :", str.trim());
-console.log("trimmed length :", str.trim().length);
-console.log("substring", str.substring(0, 3));
-console.log("replace: ", str.replace("hello", "hai"));
-console.log("startswith: ", str.startsWith("hello"));
-console.log("endswith:", str.endsWith("world"));
-console.log("split ", str.split(','));//convert string to an array
-console.log("join", str.split(',').join(','));//convert array to string
+// var str = "hello world";
+// console.log(str.toUpperCase());
+// console.log(str.length);
+// console.log("lowercase", str.toLocaleLowerCase());
+// console.log("trim :", str.trim());
+// console.log("trimmed length :", str.trim().length);
+// console.log("substring", str.substring(0, 3));
+// console.log("replace: ", str.replace("hello", "hai"));
+// console.log("startswith: ", str.startsWith("hello"));
+// console.log("endswith:", str.endsWith("world"));
+// console.log("split ", str.split(','));//convert string to an array
+// console.log("join", str.split(',').join(','));//convert array to string
 
 
 //arrays
@@ -532,75 +532,75 @@ for (var i = 1; i <= 10; i++) {
 
 //     show();
 // }
-{
+// {
     //spread operator(dots using)
-    let arr = [1, 2, 3, 4, 5]
-    console.log("arr : ", arr);
+    // let arr = [1, 2, 3, 4, 5]
+    // console.log("arr : ", arr);
 
-    let arr1 = [...arr, 6];
-    console.log("arr1 :", arr1);
+    // let arr1 = [...arr, 6];
+    // console.log("arr1 :", arr1);
 
-    let obj = {
-        firstname: "jane",
-        lastname: "don",
-        age: 16
+    // let obj = {
+    //     firstname: "jane",
+    //     lastname: "don",
+    //     age: 16
 
-    }
+    // }
 
-    console.log("obj: ", obj);
-    let obj1 = { ...obj, mark: 76 };
-    console.log("obj1: ", obj1);
-    {
+    // console.log("obj: ", obj);
+    // let obj1 = { ...obj, mark: 76 };
+    // console.log("obj1: ", obj1);
+    // {
         //destructuring
-        const [a, b, c, d, e] = arr;
-        console.log("a: ", a);
-        console.log("b :", b);
+        // const [a, b, c, d, e] = arr;
+        // console.log("a: ", a);
+        // console.log("b :", b);
         //...
 
-        const { firstName, lastName, age } = obj;
-        console.log("firstname :", firstName);
-        console.log("lastname: ", lastName);
-        console.log("age :", age);
+    //     const { firstName, lastName, age } = obj;
+    //     console.log("firstname :", firstName);
+    //     console.log("lastname: ", lastName);
+    //     console.log("age :", age);
 
-    }
+    // }
     //nested destructuring
-    const matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
+    // const matrix = [
+    //     [1, 2, 3],
+    //     [4, 5, 6],
+    //     [7, 8, 9]
 
-    ];
+    // ];
 
-    const [firstRow, secondRow, thirdRow] = matrix;
-
-
-    const [a, b, c] = firstRow;
-    const [d, e, f] = secondRow;
-    const [g, h, i] = thirdRow;
-    console.log("a: ", a);
-    console.log("b :", b);
-    console.log("d:", d);
-    console.log("g :", g);
-
-    {
-        const person = {
-            name: "john",
-            age: 30,
-            address: {
-                city: "new york",
-                zipcode: '1001',
-            },
-        }
+    // const [firstRow, secondRow, thirdRow] = matrix;
 
 
-        const { name, age, address: { city, zipcode } } = person;
-        console.log("name :", name);
-        console.log("age:", age);
-        console.log("city:", city);
-        console.log("zipcode:", zipcode);
+    // const [a, b, c] = firstRow;
+    // const [d, e, f] = secondRow;
+    // const [g, h, i] = thirdRow;
+    // console.log("a: ", a);
+    // console.log("b :", b);
+    // console.log("d:", d);
+    // console.log("g :", g);
 
-    }
-}
+//     {
+//         const person = {
+//             name: "john",
+//             age: 30,
+//             address: {
+//                 city: "new york",
+//                 zipcode: '1001',
+//             },
+//         }
+
+
+//         const { name, age, address: { city, zipcode } } = person;
+//         console.log("name :", name);
+//         console.log("age:", age);
+//         console.log("city:", city);
+//         console.log("zipcode:", zipcode);
+
+//     }
+// }
 
 //to find factorial 
 
@@ -670,15 +670,20 @@ for (var i = 1; i <= 10; i++) {
     //min
     let min = arr[0];//10
     for (let i = 0; i < arr.length; i++) {
+        //arr[0]>10->10->10=false
+        //arr[1]>10->20>10=true
         if (arr[i] < min) {
             min = arr[i];
         }
     }
     console.log("min :", min);
 
+    
     //max
     let max = arr[0];
     for (let i = 0; i < arr.length; i++) {
+        //arr[0]>10->20 = false
+        //arr[1]>10 -> 20 >10=true->max=20
         if (arr[i] > max) {
             max = arr[i]
         }
@@ -691,11 +696,7 @@ for (var i = 1; i <= 10; i++) {
     //sum function
     function arrSum(arr) {
         let sum = 0;
-
-
         for (let i = 0; i < arr.length; i++) {
-
-
             sum = sum + arr[i];
 
         }
@@ -754,32 +755,23 @@ for (var i = 1; i <= 10; i++) {
 }
 
 //program to convert negative values in array to positive
+
 {
+    let arr=[-1,1,-2,2,-10,10] 
 function arrToPositive(arr){
+    for(i=0;i<arr.length;i++){
+        if (arr[i]<0){
+            arr[i]=arr[i]*-1;
+        }
 
-
-    let i=0;
-    
-    while(i<arr.length){
-
-        
-        if(arr[i]<0) arr[i]=arr[i]*-1;
-        i++;
     }
-return arr;
+    return arr;
+
+
+   
 }
-
-let arr=[-1,1,-2,2,-10,10] 
-let newArr=arrToPositive(arr);
-console.log("newarr :",newArr);
+console.log("arr:",arrToPositive(arr));
 }
-
-
-
-
-
-
-
 
 
 
@@ -787,32 +779,18 @@ console.log("newarr :",newArr);
 
 
 // function that check str is palindrome or not 
-function check_palindrome(str) {
-    let j = str.length - 1;
-    for (let i = 0; i < j / 2; i++) {
-        let x = str[i];//forward character 
-        let y = str[j - i];//backward character
-        if (x != y) {
-            // return false if string not match
-            return false;
-        }
-    }
-    /// return true if string i
-    return true;
 
-}
-//function that print output if string is palindrome
-function is_palindrome(str) {
-    // variable that is true if string is palindrome
-    let ans = check_palindrome(str);
-    //condition checking ans is true or not 
-    if (ans == true) {
-        console.log("string is palindrome");
-    }
-    else {
-        console.log("string not a palindrome");
-    }
-}
+  let str='hello';
+  let reverse =' ';
+  for(let i =str.length-1;i>0;i--){
+    reverse=reverse+str[i];
+  }
+  if(str==reverse){
+    console.log("string is pallindrome")
+  }
+  console.log("reverse: ",reverse)
+
+
 
 //multiplication table
 // {
@@ -826,20 +804,20 @@ function is_palindrome(str) {
 // }
 
 // sum of even and odd
-{
-    let evenSum = 0;
-    let oddSum = 0;
-    for (let i = 1; i <= 50; i++) {
-        if (i % 2 == 0) {
-            console.log("Even : ", i);
-            evenSum = evenSum + i;
-        } else {
-            console.log("Odd  : ", i);
-            oddSum = oddSum + i;
-        }
-    }
-    console.log("odd sum  : ", oddSum);
-    console.log("even sum : ", evenSum);
-}
+// {
+//     let evenSum = 0;
+//     let oddSum = 0;
+//     for (let i = 1; i <= 50; i++) {
+//         if (i % 2 == 0) {
+//             console.log("Even : ", i);
+//             evenSum = evenSum + i;
+//         } else {
+//             console.log("Odd  : ", i);
+//             oddSum = oddSum + i;
+//         }
+//     }
+//     console.log("odd sum  : ", oddSum);
+//     console.log("even sum : ", evenSum);
+// }
 
 
