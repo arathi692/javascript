@@ -36,7 +36,7 @@ console.log("type of str : ", typeof d1);
 
 
 
-document.write("know we are in a realscape")
+// document.write("know we are in a realscape")
 
 //STRING METHODS
 // var str = "hello world";
@@ -533,54 +533,54 @@ for (var i = 1; i <= 10; i++) {
 //     show();
 // }
 // {
-    //spread operator(dots using)
-    // let arr = [1, 2, 3, 4, 5]
-    // console.log("arr : ", arr);
+//spread operator(dots using)
+// let arr = [1, 2, 3, 4, 5]
+// console.log("arr : ", arr);
 
-    // let arr1 = [...arr, 6];
-    // console.log("arr1 :", arr1);
+// let arr1 = [...arr, 6];
+// console.log("arr1 :", arr1);
 
-    // let obj = {
-    //     firstname: "jane",
-    //     lastname: "don",
-    //     age: 16
+// let obj = {
+//     firstname: "jane",
+//     lastname: "don",
+//     age: 16
 
-    // }
+// }
 
-    // console.log("obj: ", obj);
-    // let obj1 = { ...obj, mark: 76 };
-    // console.log("obj1: ", obj1);
-    // {
-        //destructuring
-        // const [a, b, c, d, e] = arr;
-        // console.log("a: ", a);
-        // console.log("b :", b);
-        //...
+// console.log("obj: ", obj);
+// let obj1 = { ...obj, mark: 76 };
+// console.log("obj1: ", obj1);
+// {
+//destructuring
+// const [a, b, c, d, e] = arr;
+// console.log("a: ", a);
+// console.log("b :", b);
+//...
 
-    //     const { firstName, lastName, age } = obj;
-    //     console.log("firstname :", firstName);
-    //     console.log("lastname: ", lastName);
-    //     console.log("age :", age);
+//     const { firstName, lastName, age } = obj;
+//     console.log("firstname :", firstName);
+//     console.log("lastname: ", lastName);
+//     console.log("age :", age);
 
-    // }
-    //nested destructuring
-    // const matrix = [
-    //     [1, 2, 3],
-    //     [4, 5, 6],
-    //     [7, 8, 9]
+// }
+//nested destructuring
+// const matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
 
-    // ];
+// ];
 
-    // const [firstRow, secondRow, thirdRow] = matrix;
+// const [firstRow, secondRow, thirdRow] = matrix;
 
 
-    // const [a, b, c] = firstRow;
-    // const [d, e, f] = secondRow;
-    // const [g, h, i] = thirdRow;
-    // console.log("a: ", a);
-    // console.log("b :", b);
-    // console.log("d:", d);
-    // console.log("g :", g);
+// const [a, b, c] = firstRow;
+// const [d, e, f] = secondRow;
+// const [g, h, i] = thirdRow;
+// console.log("a: ", a);
+// console.log("b :", b);
+// console.log("d:", d);
+// console.log("g :", g);
 
 //     {
 //         const person = {
@@ -678,7 +678,7 @@ for (var i = 1; i <= 10; i++) {
     }
     console.log("min :", min);
 
-    
+
     //max
     let max = arr[0];
     for (let i = 0; i < arr.length; i++) {
@@ -757,38 +757,34 @@ for (var i = 1; i <= 10; i++) {
 //program to convert negative values in array to positive
 
 {
-    let arr=[-1,1,-2,2,-10,10] 
-function arrToPositive(arr){
-    for(i=0;i<arr.length;i++){
-        if (arr[i]<0){
-            arr[i]=arr[i]*-1;
+    let arr = [-1, 1, -2, 2, -10, 10]
+    function arrToPositive(arr) {
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr[i] = arr[i] * -1;
+            }
+
         }
+        return arr;
 
     }
-    return arr;
-
-
-   
+    console.log("arr:", arrToPositive(arr));
 }
-console.log("arr:",arrToPositive(arr));
-}
-
-
 
 
 
 
 // function that check str is palindrome or not 
 
-  let str='hello';
-  let reverse =' ';
-  for(let i =str.length-1;i>0;i--){
-    reverse=reverse+str[i];
-  }
-  if(str==reverse){
+let str = 'hello';
+let reverse = ' ';
+for (let i = str.length - 1; i > 0; i--) {
+    reverse = reverse + str[i];
+}
+if (str == reverse) {
     console.log("string is pallindrome")
-  }
-  console.log("reverse: ",reverse)
+}
+console.log("reverse: ", reverse)
 
 
 
@@ -821,3 +817,69 @@ console.log("arr:",arrToPositive(arr));
 // }
 
 
+//Recursive function: a function calling itself
+{
+let i=0;
+function count(){
+    i++;
+    while(i<=10){
+        console.log(i)
+        count();//recursive function call
+    }
+  
+
+} 
+ count();//function call
+
+ console.log("countdown using recursive function call");
+ function countdown(n){
+    if(n<=0){
+        console.log("done");
+
+    }else{
+        console.log(n);
+        countdown(n-1);//recursive call
+    }
+ }
+ countdown(5);//normal function call
+
+
+//countdown(5),countdown(4),countdown(3),countdown(2),countdown(1),countdown(0),done
+console.log("factorial using recursive function call");
+
+function factorial(n){
+    if(n==0 || n==1){
+        return 1;
+
+    }else{
+        return n*factorial(n-1);
+    }
+}
+let fact = factorial(5);
+console.log("factorial: ",fact)
+//5 * factorial(4)>5*(4 * factorial(3))=> 5*(4*(3*factorial(2)))=> 5*4*3(2*factorial(1))=>5*4*3*2*1
+}
+{
+    let myForm = document.getElementById('myForm');
+    console.log("form:",myForm);
+
+    myForm.addEventListener('submit',function(e){
+        e.preventDefault();//stops default behaviour form
+
+        var datas={};
+
+        let email = document.getElementById('email');
+        let email_value=email.value;
+        console.log("email :",email_value);
+
+
+        let password=document.getElementById('password');
+        let password_value=password.value;
+        console.log("password:",password_value);
+
+        datas.email =email_value;
+        datas.password=password_value;
+
+        console.log("datas:",datas);
+    })
+    }
