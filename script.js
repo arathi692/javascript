@@ -604,39 +604,39 @@ for (var i = 1; i <= 10; i++) {
 
 //to find factorial 
 
-{
-    function fact(a) {
-        let fact = 1;
-        for (let i = a; i > 0; i--) {
-            fact = fact * i;
-        }
-        return fact;
-    }
-    let result = fact(4);
-    console.log("result:", result);
+// {
+//     function fact(a) {
+//         let fact = 1;
+//         for (let i = a; i > 0; i--) {
+//             fact = fact * i;
+//         }
+//         return fact;
+//     }
+//     let result = fact(4);
+//     console.log("result:", result);
 
-}
+// }
 
 //fibonocci series (0,1,1,2,3,5)
-{
-    function fibonacci(limit) {
-        let a = 0;
-        console.log(a);
-        let b = 1;
-        console.log(b);
-        let sum = 0;
-        while (sum < limit) {
-            sum = a + b;
-            console.log(sum);
-            a = b;
-            b = sum;
+// {
+//     function fibonacci(limit) {
+//         let a = 0;
+//         console.log(a);
+//         let b = 1;
+//         console.log(b);
+//         let sum = 0;
+//         while (sum < limit) {
+//             sum = a + b;
+//             console.log(sum);
+//             a = b;
+//             b = sum;
 
-        }
+//         }
 
 
-    }
-    fibonacci(15);
-}
+//     }
+//     fibonacci(15);
+// }
 
 //sum=1
 //a=1
@@ -649,67 +649,67 @@ for (var i = 1; i <= 10; i++) {
 //while loop stops
 
 //array to add
-{
+// {
 
-    let arr = [10, 20, 5, 40, 50]
-    let sum = 0;
+//     let arr = [10, 20, 5, 40, 50]
+//     let sum = 0;
 
-    for (i = 0; i < arr.length; i++) {
+//     for (i = 0; i < arr.length; i++) {
 
 
-        sum = sum + arr[i];
+//         sum = sum + arr[i];
 
-    }
+//     }
 
-    console.log("sum :", sum);
-    avg = sum / arr.length;         //avg
-    console.log("avg :", avg);
+//     console.log("sum :", sum);
+//     avg = sum / arr.length;         //avg
+//     console.log("avg :", avg);
 
 
 
     //min
-    let min = arr[0];//10
-    for (let i = 0; i < arr.length; i++) {
-        //arr[0]>10->10->10=false
-        //arr[1]>10->20>10=true
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-    }
-    console.log("min :", min);
+    // let min = arr[0];//10
+    // for (let i = 0; i < arr.length; i++) {
+    //     //arr[0]>10->10->10=false
+    //     //arr[1]>10->20>10=true
+    //     if (arr[i] < min) {
+    //         min = arr[i];
+    //     }
+    // }
+    // console.log("min :", min);
 
 
     //max
-    let max = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        //arr[0]>10->20 = false
-        //arr[1]>10 -> 20 >10=true->max=20
-        if (arr[i] > max) {
-            max = arr[i]
-        }
-        console.log("max :", max);
-    }
-}
-{
-    let arr = [10, 20, 5, 40, 50]
+//     let max = arr[0];
+//     for (let i = 0; i < arr.length; i++) {
+//         //arr[0]>10->20 = false
+//         //arr[1]>10 -> 20 >10=true->max=20
+//         if (arr[i] > max) {
+//             max = arr[i]
+//         }
+//         console.log("max :", max);
+//     }
+// }
+// {
+//     let arr = [10, 20, 5, 40, 50]
 
     //sum function
-    function arrSum(arr) {
-        let sum = 0;
-        for (let i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
+//     function arrSum(arr) {
+//         let sum = 0;
+//         for (let i = 0; i < arr.length; i++) {
+//             sum = sum + arr[i];
 
-        }
+//         }
 
-        console.log("sum :", sum);
-        return sum;
+//         console.log("sum :", sum);
+//         return sum;
 
-    }
+//     }
 
-    console.log("arrsum : ", arrSum(arr));
-    let arrSumVar = arrSum(arr);
-    console.log("arrSumVar: ", arrSumVar);
-}
+//     console.log("arrsum : ", arrSum(arr));
+//     let arrSumVar = arrSum(arr);
+//     console.log("arrSumVar: ", arrSumVar);
+// }
 
 //min function
 // {
@@ -735,57 +735,57 @@ for (var i = 1; i <= 10; i++) {
 
 
 //max function
-{
-    let arr = [10, 20, 5, 40, 50]
+// {
+//     let arr = [10, 20, 5, 40, 50]
 
-    function arrMax(arr) {
-        let max = arr[0];
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i]
-            }
-            console.log("max :", max);
-            return max;
-        }
-        console.log("arrMax: ", arrMax(arr));
-        let arrMax = arrMax(arr);
-        console.log("arrMax :", arrMax);
+//     function arrMax(arr) {
+//         let max = arr[0];
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] > max) {
+//                 max = arr[i]
+//             }
+//             console.log("max :", max);
+//             return max;
+//         }
+//         console.log("arrMax: ", arrMax(arr));
+//         let arrMax = arrMax(arr);
+//         console.log("arrMax :", arrMax);
 
-    }
-}
+//     }
+// }
 
 //program to convert negative values in array to positive
 
-{
-    let arr = [-1, 1, -2, 2, -10, 10]
-    function arrToPositive(arr) {
-        for (i = 0; i < arr.length; i++) {
-            if (arr[i] < 0) {
-                arr[i] = arr[i] * -1;
-            }
+// {
+//     let arr = [-1, 1, -2, 2, -10, 10]
+//     function arrToPositive(arr) {
+//         for (i = 0; i < arr.length; i++) {
+//             if (arr[i] < 0) {
+//                 arr[i] = arr[i] * -1;
+//             }
 
-        }
-        return arr;
+//         }
+//         return arr;
 
-    }
-    console.log("arr:", arrToPositive(arr));
-}
+//     }
+//     console.log("arr:", arrToPositive(arr));
+// }
 
 
 
 
 // function that check str is palindrome or not 
-
-let str = 'hello';
-let reverse = ' ';
-for (let i = str.length - 1; i > 0; i--) {
-    reverse = reverse + str[i];
-}
-if (str == reverse) {
-    console.log("string is pallindrome")
-}
-console.log("reverse: ", reverse)
-
+// {
+// let str = 'hello';
+// let reverse = ' ';
+// for (let i = str.length - 1; i >=0; i--) {
+//     reverse = reverse + str[i];
+// }
+// if (str == reverse) {
+//     console.log("string is pallindrome")
+// }
+// console.log("reverse: ", reverse)
+// }
 
 
 //multiplication table
@@ -868,6 +868,7 @@ console.log("factorial: ",fact)
 
         var datas={};
 
+
         let firstname = document.getElementById('firstname');
         let firstname_value=firstname.value;
         console.log("firstname :",firstname_value);
@@ -909,6 +910,8 @@ console.log("factorial: ",fact)
         // console.log("datas:",datas);
         handleDatas(datas);//to push obj to array
     });
+    let arr=[];
+
 
     function handleDatas(datas){
         console.log("datas :",datas);
