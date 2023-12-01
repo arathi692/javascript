@@ -936,3 +936,77 @@ console.log("factorial: ",fact)
         console.log("arr :",arr);
     }
     }
+    {
+    let arr =[
+        {
+            name : "anvar",
+            mark :5,
+            place:"pettaa"
+        },
+        {
+            name:"arathi",
+            mark:100,
+            place:"thodupuzha"
+        }
+    ];
+    console.log("arr :",arr);
+
+
+        
+    
+//ARRAY FUNCTIONS
+//forEach():used in looping
+{
+console.log("forEach ->");
+
+arr.forEach((item,index)=>{
+
+    console.log(`item -${index}:`,item);
+    
+});
+
+//FIND
+
+console.log("find->");
+const y = arr.filter((item,index)=> {
+    return item.name == "anvar";
+});
+console.log("y :",y)
+}
+//filter
+console.log("filter ->");
+const arr1 = arr.filter((item,index) => {
+    return item.mark == 5;
+})
+console.log("arr1:",arr1);
+//map
+console.log("map ->");
+const arr2 = arr.map((item)=>{
+    return item.name;
+
+});//returns an array of same length
+console.log("arr2:",arr2);
+
+//reduce 
+const value = arr.reduce((total,item)=> {
+    console.log("total :",total);
+    console.log("item :",item);
+    return total + item.mark;
+
+
+},0);
+console.log("value:",value);
+
+}
+
+
+//to find the sum of square of elements in an array using forEach
+//find the first even number
+{
+    function square(){
+        let element;
+        let arr=[3,8,5,9];
+  let square = element * element;
+arr.forEach()
+}
+}
