@@ -968,7 +968,7 @@ arr.forEach((item,index)=>{
 //FIND
 
 console.log("find->");
-const y = arr.filter((item,index)=> {
+const y = arr.find((item)=> {
     return item.name == "anvar";
 });
 console.log("y :",y)
@@ -1001,12 +1001,93 @@ console.log("value:",value);
 
 
 //to find the sum of square of elements in an array using forEach
-//find the first even number
+//find the first even number Of an array using find
+//filter all the even numbers in an array using filter function
 {
-    function square(){
-        let element;
-        let arr=[3,8,5,9];
-  let square = element * element;
-arr.forEach()
+    let num = [1, 2, 3, 4];
+    let sumOfSquares = 0;
+    
+    num.forEach(function (num) {
+      sumOfSquares += num * num;
+    });
+    
+    console.log("sum of squares in array:",sumOfSquares);
+
+//2
+   
+    const x= num.find(item => item % 2 === 0);      
+    console.log(x) ;
+//3
+    const arr1=num.filter(item => item%2==0)
+    console.log(arr1)
+    
+    }
+   
+//or first even number of an array
+{
+
+function findEvenNum(arr){
+    let evenNum=arr.find((element)=>{
+        //element=1 -> element%2->1%2 ==0 ->false
+        //element=2 -> element%2 == 0->2%2==0->true 
+        return element%2 == 0
+    });
+    return evenNum;
 }
+let firstEvenNumber = findEvenNum([1,2,3,4]);
+console.log("firstEvenNumber:",firstEvenNumber);
+
+
+//filter all even numbers using filter 
+function findAllEvenNum(arr){
+    let evenNumsArr=arr.filter((element,index)=>{
+
+        //element =1 -> element%2 ==0 -> 1%2==0-> false
+        //element=1 -> element%2 ==0-> 2%2==0 -> true -> return element -> return2
+        return element%2 == 0;
+    });
+    return evenNumsArr;
+}
+let allEvenNumbers = findAllEvenNum([1,2,3,4]);
+console.log("allevennumbers:",allEvenNumbers);
+
+}
+//double elements in an array using map
+{
+function double(arr){
+    let doubledArr = arr.map((element)=> {
+        //return-arr -> [20,40,60]
+        //element=10 -> element*2 ->10*2 =20 -> return 20
+        //element =20 -> element*2 -> 20*2=40 -> return 40
+        return element*2;
+
+
+    });
+    return doubledArr;
+
+}
+let doubledNumbers = double([10,20,30]);
+console.log("doublednumbers:",doubledNumbers)
+
+}
+//write a function 'productPositive' that takes an array of numbers as input and uses the 'reduce' method to calculate the product of all possitive numbers in an array
+{
+function productPositive(arr){
+    const prod = arr.reduce((prod,element) => {
+        //element=-1 -> element>0 -> false -> return prod -> 1
+        //element = 1 -> element>0 ->true ->             return prod = prod * element-> prod=1*1 -> return 1->1
+
+
+        if(element>0){
+            return prod = prod * element;
+        
+        }else{
+            return prod;
+        }
+
+        },1);
+        return prod;//6
+    }
+ let product = productPositive([-1,1,-2,2,-3,3]);
+ console.log("product:",product)
 }
