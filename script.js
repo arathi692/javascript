@@ -411,28 +411,28 @@ for (var i = 1; i <= 10; i++) {
 
 // }
 
-{
-    //Type of functions
+// {
+//     //Type of functions
 
-    //Named functions
-    function printHelloWorld() {
-        console.log("Hello world");
-    }
+//     //Named functions
+//     function printHelloWorld() {
+//         console.log("Hello world");
+//     }
 
-    printHelloWorld();
+//     printHelloWorld();
 
-    //Anonymous functions
-    const printHai = function () {
-        console.log("Hai");
-    }
+//     //Anonymous functions
+//     const printHai = function () {
+//         console.log("Hai");
+//     }
 
-    printHai();
+//     printHai();
 
-    //Arrow funtion
-    const printWelcome = () => {
-        console.log("Welcome");
-    };
-    printWelcome()
+//     //Arrow funtion
+//     const printWelcome = () => {
+//         console.log("Welcome");
+//     };
+//     printWelcome()
 
     //call back function
     // function printHaiWorld(a) {
@@ -480,21 +480,21 @@ for (var i = 1; i <= 10; i++) {
     // });
 
     //Math function
-    console.log(Math.sqrt(16)); //4
-    console.log(Math.round(10.4)); //10
-    console.log(Math.round(10.5)); //11
-    console.log(Math.ceil(10.2)); //11
-    console.log(Math.ceil(10.8)); //11
-    console.log(Math.floor(10.7)); //10
-    console.log(Math.floor(10.2)); //10
-    console.log(Math.abs(-90)); //90
-    console.log(Math.abs(90)); //90
-    console.log(Math.PI); //3.141592653589793
-    console.log(Math.max(10, 20, 30)); //30
-    console.log(Math.min(10, 20, 30)); //10
-    console.log(Math.pow(2, 3)); //8
+//     console.log(Math.sqrt(16)); //4
+//     console.log(Math.round(10.4)); //10
+//     console.log(Math.round(10.5)); //11
+//     console.log(Math.ceil(10.2)); //11
+//     console.log(Math.ceil(10.8)); //11
+//     console.log(Math.floor(10.7)); //10
+//     console.log(Math.floor(10.2)); //10
+//     console.log(Math.abs(-90)); //90
+//     console.log(Math.abs(90)); //90
+//     console.log(Math.PI); //3.141592653589793
+//     console.log(Math.max(10, 20, 30)); //30
+//     console.log(Math.min(10, 20, 30)); //10
+//     console.log(Math.pow(2, 3)); //8
 
-}
+// }
 
 // {
 
@@ -818,124 +818,124 @@ for (var i = 1; i <= 10; i++) {
 
 
 //Recursive function: a function calling itself
-{
-let i=0;
-function count(){
-    i++;
-    while(i<=10){
-        console.log(i)
-        count();//recursive function call
-    }
+// {
+// let i=0;
+// function count(){
+//     i++;
+//     while(i<=10){
+//         console.log(i)
+//         count();//recursive function call
+//     }
   
 
-} 
- count();//function call
+// } 
+//  count();//function call
 
- console.log("countdown using recursive function call");
- function countdown(n){
-    if(n<=0){
-        console.log("done");
+//  console.log("countdown using recursive function call");
+//  function countdown(n){
+//     if(n<=0){
+//         console.log("done");
 
-    }else{
-        console.log(n);
-        countdown(n-1);//recursive call
-    }
- }
- countdown(5);//normal function call
-
-
-//countdown(5),countdown(4),countdown(3),countdown(2),countdown(1),countdown(0),done
-console.log("factorial using recursive function call");
-
-function factorial(n){
-    if(n==0 || n==1){
-        return 1;
-
-    }else{
-        return n*factorial(n-1);
-    }
-}
-let fact = factorial(5);
-console.log("factorial: ",fact)
-//5 * factorial(4)>5*(4 * factorial(3))=> 5*(4*(3*factorial(2)))=> 5*4*3(2*factorial(1))=>5*4*3*2*1
-}
-{
-    let myForm = document.getElementById('myForm');
-    console.log("form:",myForm);
-
-     myForm.addEventListener('submit',function(e){
-        e.preventDefault();//stops default behaviour form
-
-        var datas={};
+//     }else{
+//         console.log(n);
+//         countdown(n-1);//recursive call
+//     }
+//  }
+//  countdown(5);//normal function call
 
 
-        let firstname = document.getElementById('firstname');
-        let firstname_value=firstname.value;
-        console.log("firstname :",firstname_value);
+// //countdown(5),countdown(4),countdown(3),countdown(2),countdown(1),countdown(0),done
+// console.log("factorial using recursive function call");
 
-        let lastname = document.getElementById('lastname');
-        let  lastname_value=lastname.value;
-        console.log("lastname :",lastname_value);
+// function factorial(n){
+//     if(n==0 || n==1){
+//         return 1;
 
+//     }else{
+//         return n*factorial(n-1);
+//     }
+// }
+// let fact = factorial(5);
+// console.log("factorial: ",fact)
+// //5 * factorial(4)>5*(4 * factorial(3))=> 5*(4*(3*factorial(2)))=> 5*4*3(2*factorial(1))=>5*4*3*2*1
+// }
+// {
+//     let myForm = document.getElementById('myForm');
+//     console.log("form:",myForm);
 
-        let place = document.getElementById('place');
-        let place_value=place.value;
-        console.log("place :",place_value);
+//      myForm.addEventListener('submit',function(e){
+//         e.preventDefault();//stops default behaviour form
 
-        let phone = document.getElementById('phone');
-        let phone_value=phone.value;
-        console.log("phone :",phone_value);
-
-        let age = document.getElementById('age');
-        let age_value=age.value;
-        console.log("phone :",age_value);
-
-        let email = document.getElementById('email');
-        let email_value=email.value;
-        console.log("email :",email_value);
-
-
-        let password=document.getElementById('password');
-        let password_value=password.value;
-        console.log("password:",password_value);
-
-        datas.firstname = firstname_value;
-        datas.lastname = lastname_value;
-        datas.place = place_value;
-        datas.phone = phone_value;
-        datas.email =email_value;
-        datas.password=password_value;
-        datas.age= age_value;
-
-        // console.log("datas:",datas);
-        handleDatas(datas);//to push obj to array
-    });
-    let arr=[];
+//         var datas={};
 
 
-    function handleDatas(datas){
-        console.log("datas :",datas);
-        let message = document.getElementById('message');
+//         let firstname = document.getElementById('firstname');
+//         let firstname_value=firstname.value;
+//         console.log("firstname :",firstname_value);
+
+//         let lastname = document.getElementById('lastname');
+//         let  lastname_value=lastname.value;
+//         console.log("lastname :",lastname_value);
+
+
+//         let place = document.getElementById('place');
+//         let place_value=place.value;
+//         console.log("place :",place_value);
+
+        // let phone = document.getElementById('phone');
+        // let phone_value=phone.value;
+        // console.log("phone :",phone_value);
+
+        // let age = document.getElementById('age');
+        // let age_value=age.value;
+        // console.log("phone :",age_value);
+
+        // let email = document.getElementById('email');
+        // let email_value=email.value;
+        // console.log("email :",email_value);
+
+
+        // let password=document.getElementById('password');
+        // let password_value=password.value;
+        // console.log("password:",password_value);
+
+        // datas.firstname = firstname_value;
+        // datas.lastname = lastname_value;
+        // datas.place = place_value;
+        // datas.phone = phone_value;
+        // datas.email =email_value;
+        // datas.password=password_value;
+        // datas.age= age_value;
+
+    //     // console.log("datas:",datas);
+    //     handleDatas(datas);//to push obj to array
+    // });
+    // let arr=[];
+
+
+    // function handleDatas(datas){
+    //     console.log("datas :",datas);
+    //     let message = document.getElementById('message');
         
 
-        //validation
-        if(arr.length > 0){
-            for(let i =0;i<arr.length;i++){
-                if(arr[i].email == datas.email){
-                    message.innerHTML ="email already found";
-                    return;
+    //     //validation
+    //     if(arr.length > 0){
+    //         for(let i =0;i<arr.length;i++){
+    //             if(arr[i].email == datas.email){
+    //                 message.innerHTML ="email already found";
+    //                 return;
 
-                }
+    //             }
                 
                 
-            }
-        }
+    //         }
+    //     }
 
-        arr.push(datas);
-        message.innerHTML="sucess";
-        console.log("arr :",arr);
-    }
-    }
+    //     arr.push(datas);
+    //     message.innerHTML="sucess";
+    //     console.log("arr :",arr);
+    // }
+    // }
     {
     let arr =[
         {
@@ -1075,7 +1075,7 @@ console.log("doublednumbers:",doubledNumbers)
 function productPositive(arr){
     const prod = arr.reduce((prod,element) => {
         //element=-1 -> element>0 -> false -> return prod -> 1
-        //element = 1 -> element>0 ->true ->             return prod = prod * element-> prod=1*1 -> return 1->1
+        //element = 1 -> element>0 ->true -> return prod = prod * element-> prod=1*1 -> return 1->1
 
 
         if(element>0){
@@ -1091,3 +1091,73 @@ function productPositive(arr){
  let product = productPositive([-1,1,-2,2,-3,3]);
  console.log("product:",product)
 }
+
+//1.Given an array of numbers, use the map method to create a new array where each number is doubled.
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = numbers.map(num => num * 2);
+console.log("a new array where each number is doubled:",doubledNumbers);
+
+//2.Given an array of numbers, use the filter method to create a new array containing only the even numbers.
+{
+    let arr=[5,9,8,4];
+    let evennumber=arr.filter(num => num %2 ===0);
+    console.log("new array containing only the even numbers:",evennumber)
+}
+//3.Given an array of numbers, use the reduce method to calculate the sum of all the numbers
+// {
+    
+//     let arr=[3,4,5,6];
+   
+//     let  sum = arr.reduce((total,item)=> {
+        
+//     return sum = total+item;
+    
+//     },0);
+//     console.log("value:",value);
+    
+//     }
+    
+
+//4.Given an array of numbers, use the reduce method to find the maximum value in the array.
+{
+    let arr=[1,2,3,4];
+    let max = numbers.reduce((total, item) => {
+        return Math.max(total, item);
+      }, );
+      
+      console.log("maximum:",max);
+}
+//5.Given an array of strings, use the map method to create a new array where each string is capitalized.
+let string = ["cat", "cow", "dog"];
+
+let capital = string.map((str) => {
+  return str.toUpperCase();
+});
+
+console.log("string is capitalized:",capital);
+
+//6.Given an array of words, use the filter method to create a new array containing only the words with a length greater than a specified value.
+{
+    let arr = ["hello", "world", "javascript","toughh"];
+    let minLength = 5;
+
+let newWord = arr.filter((arr) => {
+  return arr.length > minLength;
+});
+
+console.log("newwords:",newWord); 
+
+}
+
+//7.Given an array of numbers, use the map method to create a new array of strings indicating whether each number is even or odd.
+{
+    let num=[7,9,6,3,4];
+    const even = numbers.map(num => (num % 2 == 0));
+    console.log("even",even)
+}
+
+//8.Given an array, use the filter method to create a new array with only unique elements (remove duplicates).
+
+//9.Given an array of numbers, use the sort method to sort them in ascending order.
+
+//10.Given an array of objects with a name property, use the map method to create a new array containing only the names.
