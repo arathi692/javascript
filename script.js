@@ -1104,18 +1104,18 @@ console.log("a new array where each number is doubled:",doubledNumbers);
     console.log("new array containing only the even numbers:",evennumber)
 }
 //3.Given an array of numbers, use the reduce method to calculate the sum of all the numbers
-// {
+{
     
-//     let arr=[3,4,5,6];
+    let arr=[3,4,5,6];
    
-//     let  sum = arr.reduce((total,item)=> {
+    const sum= arr.reduce((total,item)=> {
         
-//     return sum = total+item;
+    return total+item;
     
-//     },0);
-//     console.log("value:",value);
+    },0);
+    console.log("sum of num:",sum);
     
-//     }
+    }
     
 
 //4.Given an array of numbers, use the reduce method to find the maximum value in the array.
@@ -1161,3 +1161,56 @@ console.log("newwords:",newWord);
 //9.Given an array of numbers, use the sort method to sort them in ascending order.
 
 //10.Given an array of objects with a name property, use the map method to create a new array containing only the names.
+
+//to take vowels from string
+
+// {
+
+//     let str = "aeroplane";
+//     function vowels(str){
+//         for (let i = 0; i < str.length; i++) {
+//             if(str[i]){
+                
+
+//             }
+           
+//         }
+//           }
+//           return vowels;
+//         }
+    
+    
+    {
+//this is used to refer current object
+console.log(this);
+let obj ={
+    name : "john",
+    getAge: function(){
+        console.log(this);
+
+    }
+}
+console.log(obj.name);
+console.log(obj.getAge());
+
+    }
+    function greet(message,message1){
+        console.log("message :",message);
+        console.log("message1:",message1);
+
+        console.log("this:",this);
+        console.log("name:",this.name);
+
+
+    }
+    
+
+    //call method
+    // greet.call(obj,"hello","hello1");
+
+    //bind method
+    let boundGreet = greet.bind(obj ,"hello","hello1");
+    console.log("boundGreet:",boundGreet);
+    boundGreet();
+
+    
