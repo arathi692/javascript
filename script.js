@@ -1093,68 +1093,68 @@ function productPositive(arr){
 }
 
 //1.Given an array of numbers, use the map method to create a new array where each number is doubled.
-let numbers = [1, 2, 3, 4, 5];
-let doubledNumbers = numbers.map(num => num * 2);
-console.log("a new array where each number is doubled:",doubledNumbers);
+// let numbers = [1, 2, 3, 4, 5];
+// let doubledNumbers = numbers.map(num => num * 2);
+// console.log("a new array where each number is doubled:",doubledNumbers);
 
 //2.Given an array of numbers, use the filter method to create a new array containing only the even numbers.
-{
-    let arr=[5,9,8,4];
-    let evennumber=arr.filter(num => num %2 ===0);
-    console.log("new array containing only the even numbers:",evennumber)
-}
+// {
+//     let arr=[5,9,8,4];
+//     let evennumber=arr.filter(num => num %2 ===0);
+//     console.log("new array containing only the even numbers:",evennumber)
+// }
 //3.Given an array of numbers, use the reduce method to calculate the sum of all the numbers
-{
+// {
     
-    let arr=[3,4,5,6];
+//     let arr=[3,4,5,6];
    
-    const sum= arr.reduce((total,item)=> {
+//     const sum= arr.reduce((total,item)=> {
         
-    return total+item;
+//     return total+item;
     
-    },0);
-    console.log("sum of num:",sum);
+//     },0);
+//     console.log("sum of num:",sum);
     
-    }
+//     }
     
 
 //4.Given an array of numbers, use the reduce method to find the maximum value in the array.
-{
-    let arr=[1,2,3,4];
-    let max = numbers.reduce((total, item) => {
-        return Math.max(total, item);
-      }, );
+// {
+//     let arr=[1,2,3,4];
+//     let max = numbers.reduce((total, item) => {
+//         return Math.max(total, item);
+//       }, );
       
-      console.log("maximum:",max);
-}
+//       console.log("maximum:",max);
+// }
 //5.Given an array of strings, use the map method to create a new array where each string is capitalized.
-let string = ["cat", "cow", "dog"];
+// let string = ["cat", "cow", "dog"];
 
-let capital = string.map((str) => {
-  return str.toUpperCase();
-});
+// let capital = string.map((str) => {
+//   return str.toUpperCase();
+// });
 
-console.log("string is capitalized:",capital);
+// console.log("string is capitalized:",capital);
 
 //6.Given an array of words, use the filter method to create a new array containing only the words with a length greater than a specified value.
-{
-    let arr = ["hello", "world", "javascript","toughh"];
-    let minLength = 5;
+// {
+//     let arr = ["hello", "world", "javascript","toughh"];
+//     let minLength = 5;
 
-let newWord = arr.filter((arr) => {
-  return arr.length > minLength;
-});
+// let newWord = arr.filter((arr) => {
+//   return arr.length > minLength;
+// });
 
-console.log("newwords:",newWord); 
+// console.log("newwords:",newWord); 
 
-}
+// }
 
 //7.Given an array of numbers, use the map method to create a new array of strings indicating whether each number is even or odd.
-{
-    let num=[7,9,6,3,4];
-    const even = numbers.map(num => (num % 2 == 0));
-    console.log("even",even)
-}
+// {
+//     let num=[7,9,6,3,4];
+//     const even = numbers.map(num => (num % 2 == 0));
+//     console.log("even",even)
+// }
 
 //8.Given an array, use the filter method to create a new array with only unique elements (remove duplicates).
 
@@ -1213,4 +1213,110 @@ console.log(obj.getAge());
     console.log("boundGreet:",boundGreet);
     boundGreet();
 
+    //apply method
+    greet.apply(obj,["hello","hello1"]);
+
     
+// {
+//     let obj = {
+//         name:"harry",
+//         age: 30,
+//         mark:50,
+//         greeting:function(){
+//             console.log("name:",this.name);
+//             console.log("age:",this.age);
+//         }
+
+//     }
+
+// obj.greeting();//
+// }
+// //constructor function
+// function Person(name,age,mark){
+//     this.name =name;
+//     this.age = age;
+//     this.mark=mark;
+//     this.greeting = function(){
+//         console.log("name:",this.name);
+//         console.log("age:",age);
+
+//     }
+// }
+// const person1 = new Person("john",30);
+// console.log("person1:",person1);
+// person1.greeting();
+
+// const person2 = new Person("jane",25);
+// console.log("person2:",person2);
+// person2.greeting();
+
+// //updating individual objects
+// person2.place="ekm";
+// console.log("Person2.place",person2.place);
+
+// Person.prototype.getMark = function(){
+//     return this.mark;
+// }
+// console.log("Mark of person1:",person1.getMark());
+// console.log("mark of person2:",person2.getMark());
+
+// {
+//     let obj1 = {
+//         type:"series",
+//         model: 2017,
+//         Cars:function(){
+//             console.log("type",this.type);
+//             console.log("model",this.model);
+
+//         }
+
+        
+//     }
+//     obj1.Cars();
+// }
+
+// function Car(type,model){
+//     this.type = type;
+//     this.model = model;
+//     this.greeting=function(){
+//         console.log("type",this.type);
+//         console.log("model:",this.model);
+//     }
+// }
+// const car1 = new Car("5series",2007);
+// console.log("car1:",car1);
+// car1.Cars();
+
+// const car2 = new Car("s series",2020);
+// console.log("car2",car2);
+// car2.Cars();
+
+//using classes
+{
+class Person{
+    name;
+    age;
+    mark;
+
+    constructor(name,age,mark){
+        this.name = name;
+        this.age =age;
+        this.mark=mark;
+
+    }
+
+    greeting(){
+        console.log("name:",this.name);
+        console.log("age:",age);
+        console.log("mark:",mark);
+          
+    }
+}
+let person1 = new Person("john",30,70);
+console.log("person1:",person1);
+person1.greeting();
+
+let person2 = new Person("anu",20,50);
+console.log("person2:",person2);
+person2.greeting();
+}
