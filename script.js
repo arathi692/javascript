@@ -1242,7 +1242,7 @@ console.log(obj.getAge());
 
 //     }
 // }
-// const person1 = new Person("john",30);
+// const person1 = new Person("john",30);//new keyword is used to create an object
 // console.log("person1:",person1);
 // person1.greeting();
 
@@ -1292,31 +1292,135 @@ console.log(obj.getAge());
 // car2.Cars();
 
 //using classes
-{
-class Person{
-    name;
-    age;
-    mark;
+// {
+// class Person{
+//     name;
+//     age;
+//     mark;
 
-    constructor(name,age,mark){
+//     constructor(name,age,mark){
+//         this.name = name;
+//         this.age =age;
+//         this.mark=mark;
+
+//     }
+
+//     greeting(){
+//         console.log("name:",this.name);
+//         console.log("age:",age);
+//         console.log("mark:",mark);
+          
+//     }
+// }
+// let person1 = new Person("john",30,70);
+// console.log("person1:",person1);
+// person1.greeting();
+
+// let person2 = new Person("anu",20,50);
+// console.log("person2:",person2);
+// person2.greeting();
+// }
+
+class Animal{
+    constructor(name){
         this.name = name;
-        this.age =age;
-        this.mark=mark;
-
     }
 
-    greeting(){
-        console.log("name:",this.name);
-        console.log("age:",age);
-        console.log("mark:",mark);
-          
+    walk(){
+        console.log("animal walking");
     }
 }
-let person1 = new Person("john",30,70);
-console.log("person1:",person1);
-person1.greeting();
 
-let person2 = new Person("anu",20,50);
-console.log("person2:",person2);
-person2.greeting();
+class Dog extends Animal{
+    nickName;
+    constructor(name,nickName){
+        super(name);//calls parent constructor
+        this.nickName=nickName
+    }
+    walk(){
+        console.log("dog walking....")
+    }
+}
+
+let myAnimal = new Animal("monkey");
+console.log("myanimal:",myAnimal);
+myAnimal.walk();
+
+
+let myDog = new Dog("parent of arjun","Arjun");
+console.log("mydog",myDog);
+myDog.walk();
+
+
+{
+class Cars{
+    constructor(car){
+        this.car = car;
+
+        
+    }
+    model(){
+        console.log("car model ");
+    }
+}
+    class Polo extends Cars{
+        versionName;
+        constructor(model,versionName){
+            super(model);
+            this.versionName=versionName
+        }
+        model(){
+            console.log("polo color is red");
+        }
+    }
+    let myCars = new Cars("2020");
+    console.log("myCars:",myCars)
+    myCars.model();
+
+
+    let myPolo = new Polo("class of cars","red");
+    console.log("myCar",myCars);
+    myCars.model();
+
+}
+
+{
+    //getters and setters
+class car{
+    constructor(name){
+        this.name = name;
+    }
+
+    //without using getters and setters
+    //setColor(color){
+        //this.color = color;
+        //}
+        //getColor(){
+            //return this.color;
+            //}
+            
+
+
+            //using getters and setters
+            set setColor(color){
+                this.color=color;
+            }
+            get getColor(){
+                return this.color;
+            }
+        }
+
+        let myCar = new car("Benz");
+    }
+
+    //setting color
+    //myCar.setColor("green");//without using setter
+    myCar.setColor = "green";//using setter
+
+
+    console.log("mycar:",myCar);
+
+    //getting color
+    //console.lo
+}
 }
