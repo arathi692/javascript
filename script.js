@@ -1321,68 +1321,68 @@ console.log(obj.getAge());
 // person2.greeting();
 // }
 
-class Animal{
-    constructor(name){
-        this.name = name;
-    }
+// class Animal{
+//     constructor(name){
+//         this.name = name;
+//     }
 
-    walk(){
-        console.log("animal walking");
-    }
-}
+//     walk(){
+//         console.log("animal walking");
+//     }
+// }
 
-class Dog extends Animal{
-    nickName;
-    constructor(name,nickName){
-        super(name);//calls parent constructor
-        this.nickName=nickName
-    }
-    walk(){
-        console.log("dog walking....")
-    }
-}
+// class Dog extends Animal{
+//     nickName;
+//     constructor(name,nickName){
+//         super(name);//calls parent constructor
+//         this.nickName=nickName
+//     }
+//     walk(){
+//         console.log("dog walking....")
+//     }
+// }
 
-let myAnimal = new Animal("monkey");
-console.log("myanimal:",myAnimal);
-myAnimal.walk();
-
-
-let myDog = new Dog("parent of arjun","Arjun");
-console.log("mydog",myDog);
-myDog.walk();
+// let myAnimal = new Animal("monkey");
+// console.log("myanimal:",myAnimal);
+// myAnimal.walk();
 
 
-{
-class Cars{
-    constructor(car){
-        this.car = car;
+// let myDog = new Dog("parent of arjun","Arjun");
+// console.log("mydog",myDog);
+// myDog.walk();
+
+
+// {
+// class Cars{
+//     constructor(car){
+//         this.car = car;
 
         
-    }
-    model(){
-        console.log("car model ");
-    }
-}
-    class Polo extends Cars{
-        versionName;
-        constructor(model,versionName){
-            super(model);
-            this.versionName=versionName
-        }
-        model(){
-            console.log("polo color is red");
-        }
-    }
-    let myCars = new Cars("2020");
-    console.log("myCars:",myCars)
-    myCars.model();
+//     }
+//     model(){
+//         console.log("car model ");
+//     }
+// }
+//     class Polo extends Cars{
+//         versionName;
+//         constructor(model,versionName){
+//             super(model);
+//             this.versionName=versionName
+//         }
+//         model(){
+//             console.log("polo color is red");
+//         }
+//     }
+//     let myCars = new Cars("2020");
+//     console.log("myCars:",myCars)
+//     myCars.model();
 
 
-    let myPolo = new Polo("class of cars","red");
-    console.log("myCar",myCars);
-    myCars.model();
+//     let myPolo = new Polo("class of cars","red");
+//     console.log("myCar",myCars);
+//     myCars.model();
 
-}
+// }
 
 {
     //getters and setters
@@ -1411,8 +1411,7 @@ class car{
         }
 
         let myCar = new car("Benz");
-    }
-
+    
     //setting color
     //myCar.setColor("green");//without using setter
     myCar.setColor = "green";//using setter
@@ -1421,6 +1420,82 @@ class car{
     console.log("mycar:",myCar);
 
     //getting color
-    //console.lo
-}
-}
+    //console.log("color of myCar:",myCar.getColor());//without using filter
+    console.log("color of myCar:",myCar.color);//using getter
+    }
+
+
+
+    class Button{
+        constructor(content){
+            this.button = document.createElement('button');
+            this.button.innerHTML = content;
+            document.body.appendChild(this.button);
+        }
+
+        set width(width){
+            this.button.style.width = width + "px";
+
+        }
+
+        set height(height){
+            this.button.style.height = height +"px";
+        }
+
+        get width(){
+            return this.button.style.width;
+        }
+        get height(){
+            return this.button.style.height;
+
+        }
+
+        onClick(fn){
+            this.button.onClick = fn;
+        }
+
+    }
+    let myButton = new Button('click here');
+    console.log("myButton:",myButton);
+
+    myButton.width=200;
+    myButton.height=50;
+
+    console.log("button width:",myButton.width);
+    console.log("button height:",myButton.height);
+
+    myButton.onClick(function (){
+        console.log("my button clicked....");
+
+
+    });
+
+    //inheritance
+    class YellowButton extends Button{
+
+        //Method Over riding
+        onClick(fn){
+            this.button.onclick = function (){
+                this.button.style.background = "yellow";
+                fn();
+
+            }.bind(this);
+        }
+
+    }
+    let myYellowButton = new YellowButton("yellow Button");
+    console.log("myyellowbutton:",myYellowButton);
+
+    myYellowButton.width=300;
+    myYellowButton.height = 75;
+
+
+    console.log("myyellowbutton width:",myYellowButton.width);
+
+    console.log("myyellowbutton height:",myYellowButton.height);
+
+    myYellowButton.onClick(function(){
+        console.log("button clicked...");
+    })
+
+    
