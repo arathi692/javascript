@@ -1498,4 +1498,21 @@ class car{
         console.log("button clicked...");
     })
 
+    class Paragraph{
+        constructor(content){
+            this.paragraph = document.createElement('paragraph');
+            this.paragraph.innerHTML = content;
+            document.body.appendChild(this.paragraph);
+        }
+        
+    }
+    let myParagraph = new Paragraph('once upon a time there lived a grandmom named alasandra she lived alone.her house was inside a jungle');
+    console.log("myParagraph:",myParagraph);
+
     
+
+
+
+
+
+
