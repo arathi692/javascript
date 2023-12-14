@@ -57,8 +57,13 @@
 
     console.log("\n\n\nAjax..");
     let xhr = new XMLHttpRequest();
+    let btn= document.getElementById('btn');
+
     xhr.open("get",'https://jsonplaceholder.typicode.com/users');
-    xhr.send();
+    btn.addEventListener('click',()=>{
+        xhr.send();
+
+    })
 
     //get
     //post
@@ -101,3 +106,5 @@
     console.log("state not completed")
  }
     }
+
+    
