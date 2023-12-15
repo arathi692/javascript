@@ -68,9 +68,72 @@ const result14 =  regexp14.test(str3);//it matches fishe,fishes,fishnesss
 console.log("result14:",result14 );
 
 const regexp15= /fishes.$/i;//any character can occur after fish,'.' represents any type of character
-const result15 =  regexp14.test(str3);//it matches fishe,fisha,fishb,fish1,fish2....but it does not matches fish,a character in place of '.'is a must
-console.log("result14:",result14 );
+const result15 =  regexp15.test(str3);//it matches fishe,fisha,fishb,fish1,fish2....but it does not matches fish,a character in place of '.'is a must
+console.log("result15:",result15 );
+
+const regexp16= /fish.*$/i;//any character can occur after fish,'.' represents any type of character
+const result16 =  regexp14.test(str3);//it matches fishe,fishes,fishness,......since due to '*' multiple characters are matched
+console.log("result16:",result16);
+
+
+//input validation
+//A-Z,a-z
+//0-9
+//...
+//starts with character
+
+const regexInp=/^[a-z][a-z0-9]*$/i;
+
+function checkResult(value){
+    const result = regexInp.test(value);
+
+    if(result){
+        return 'valid string';
+    }else{
+        return 'invalid string';
+    }
+}
+
+const value = "_J_9";
+
+let validation_result =checkResult(value);
+console.log("validation_result:",validation_result);
 
 
 
 
+//
+function onChange(arg){
+    let validation_result=checkResult(arg.value);
+    let label = document.getElementById('error');
+    if(validation_result){
+        label.innerHTML = validation_result
+
+    }else{
+        label.innerHTML= validation_result;
+    }
+}
+
+//string replace using regular expressions
+let str5="a-b-c";
+let replacedString1 = str5.replace(/-/,':');//replaces first '-' with':'
+console.log("replacedstring:",replacedString1);
+
+let replacedString2= str5.replace(/-/g,':');//replaces first '-' with':'
+console.log("replacedstring2:",replacedString2);
+
+let dateStr ='12-10-04'
+
+let dateStrReplaced = dateStr.replace(/(\d{2}$)/,'20$1');//gets '04' from dataStr and replace it as '2004',$1 will get the value of the first capture group ie within '()'brackets
+console.log("dateStrreplaced:",dateStrReplaced)
+
+//email
+const exp1=/[a-z]/i;
+
+function emailCheck(arg){
+    let validation_result=checkResult(arg.value);
+    let label = document.getElementById('errorr');
+    if(validation_result){
+
+    }
+}
